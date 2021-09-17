@@ -9,35 +9,44 @@
 
 <body>
     <h1 class="title">
-        <span style="color: #FF8080">Rock</span> <span style="color: #AADE87">Paper</span> <span style="color: #AACCFF">Scissors</span>
+        <span style="color: #FF8080">Rock</span> <span style="color: #AADE87">Paper</span> <span
+            style="color: #AACCFF">Scissors</span>
     </h1>
     <p class="description">
-        Paper beats rock. Rock beats scissors. Scissors beats paper.
+        Paper beats rock. Rock beats scissors. Scissors beats paper. <br> First to five wins.
     </p>
     <h2 style="text-align: center">
         Choose your weapon:
     </h2>
 
     <div class="buttons">
-        <button type="button" class="weapon" style="background-color: #FF8080">
-            <img class="icon" src="images/rock.png" alt="rock">
+        <button id="btn1" type="button" class="weapon" style="background-color: #FF8080">
+            <img id="paper" class="icon" src="images/rock.png" alt="rock">
         </button>
-        <button type="button" class="weapon" style="background-color: #AADE87">
+        <button id="btn2" type="button" class="weapon" style="background-color: #AADE87">
             <img class="icon" src="images/paper.png" alt="rock">
         </button>
-        <button type="button" class="weapon" style="background: #AACCFF;">
-            <img class="icon " src="images/scissors.png " alt="rock " >
+        <button id="btn3" type="button" class="weapon" style="background: #AACCFF;">
+            <img class="icon " src="images/scissors.png " alt="rock ">
         </button>
-        <div class="break"></div>
-        <div class="weapon" style="background-color: #FFE680">Insert stuff</div>
     </div>
-    <button type="button" class="restart"> 
+    <div class="scorebox">
+        <div class="stats" style="background-color: #FFE680">
+            <div id="scorebar">
+                <div id="computer">
+                    <p>Computer:</p>
+                </div>
+                <div id="message"></div>
+            </div>
+        </div>
+    </div>
+    <button id="restart" type="button" class="restart">
         Restart
     </button>
 </body>
 
 <footer>
-
+    Designed and developed by ronaldLjin.
 </footer>
 
 
