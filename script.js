@@ -1,11 +1,27 @@
 const btn1 = document.querySelector('#btn1');
-btn1.onclick = () => play('rock');
+btn1.addEventListener('click', () => {
+    play('rock');
+    btn1.style.backgroundColor='#fe4646';
+    btn2.style.backgroundColor='#AADE87';
+    btn3.style.backgroundColor='#AACCFF';
+});
 
 const btn2 = document.querySelector('#btn2');
-btn2.onclick = () => play('paper');
+btn2.addEventListener('click', () => {
+    play('paper');
+    btn1.style.backgroundColor='#FF8080';
+    btn2.style.backgroundColor='#8cd25d';
+    btn3.style.backgroundColor='#AACCFF';
+});
 
 const btn3 = document.querySelector('#btn3');
-btn3.onclick = () => play('scissors');
+btn3.addEventListener('click', () => {
+    play('scissors');
+    btn1.style.backgroundColor='#FF8080';
+    btn2.style.backgroundColor='#AADE87';
+    btn3.style.backgroundColor='#6aa5ff';
+});
+
 
 const scorebar = document.querySelector('#scorebar');
 const score = document.createElement('div');
@@ -68,13 +84,13 @@ function play(weapon) {
         score.textContent = `W-L-T: ${yourScore}-${computerScore}-${tie}`;
         message.textContent = 'You win!';
     };
-    if (computerScore==5 && yourScore<5) {
+    if (computerScore == 5 && yourScore < 5) {
         message.textContent = 'Game over. You lost!';
         btn1.disabled = true;
         btn2.disabled = true;
         btn3.disabled = true;
-    } else if (yourScore==5 && computerScore<5) {
-        message.textContent = 'Congratulations, you won!'        
+    } else if (yourScore == 5 && computerScore < 5) {
+        message.textContent = 'Congratulations, you won!'
         btn1.disabled = true;
         btn2.disabled = true;
         btn3.disabled = true;
