@@ -10,7 +10,7 @@ btn3.onclick = () => play('scissors');
 const scorebar = document.querySelector('#scorebar');
 const score = document.createElement('div');
 scorebar.classList.add('score')
-score.textContent = '0-0-0';
+score.textContent = 'W-L-T: 0-0-0';
 
 const message = document.querySelector('#message');
 message.classList.add('message');
